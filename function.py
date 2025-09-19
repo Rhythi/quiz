@@ -7,6 +7,8 @@ def greet_user():
 
 # function for starting quiz
 
+import random
+
 def start_quiz():
     quiz = [
     {
@@ -39,27 +41,29 @@ def start_quiz():
         "options": ["A. Oxygen", "B. Carbon Dioxide", "C. Nitrogen", "D. Hydrogen"],
         "answer": "B. Carbon Dioxide"
     },
-    # {
-    #     "question": "In which year did India gain independence?",
-    #     "options": ["A. 1945", "B. 1947", "C. 1950", "D. 1952"],
-    #     "answer": "B. 1947"
-    # },
-    # {
-    #     "question": "What is the hardest natural substance on Earth?",
-    #     "options": ["A. Gold", "B. Iron", "C. Diamond", "D. Quartz"],
-    #     "answer": "C. Diamond"
-    # },
-    # {
-    #     "question": "Which continent is known as the 'Dark Continent'?",
-    #     "options": ["A. Asia", "B. Africa", "C. South America", "D. Australia"],
-    #     "answer": "B. Africa"
-    # },
-    # {
-    #     "question": "Who invented the light bulb?",
-    #     "options": ["A. Isaac Newton", "B. Nikola Tesla", "C. Albert Einstein", "D. Thomas Edison"],
-    #     "answer": "D. Thomas Edison"
-    # }
+    {
+        "question": "In which year did India gain independence?",
+        "options": ["A. 1945", "B. 1947", "C. 1950", "D. 1952"],
+        "answer": "B. 1947"
+    },
+    {
+        "question": "What is the hardest natural substance on Earth?",
+        "options": ["A. Gold", "B. Iron", "C. Diamond", "D. Quartz"],
+        "answer": "C. Diamond"
+    },
+    {
+        "question": "Which continent is known as the 'Dark Continent'?",
+        "options": ["A. Asia", "B. Africa", "C. South America", "D. Australia"],
+        "answer": "B. Africa"
+    },
+    {
+        "question": "Who invented the light bulb?",
+        "options": ["A. Isaac Newton", "B. Nikola Tesla", "C. Albert Einstein", "D. Thomas Edison"],
+        "answer": "D. Thomas Edison"
+    }
     ]
+
+    random.shuffle(quiz)
 
     answer =""
     correct_count=0
